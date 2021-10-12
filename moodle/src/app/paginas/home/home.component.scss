@@ -1,0 +1,57 @@
+.geral {
+    margin-top: 50px;
+
+    .progresso {
+        margin-top: 30px;
+        background: #1f4164;
+        border: 1px solid #1f4164;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.14),
+            0px 1px 5px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        color: white;
+        padding: 15px;
+    }
+
+    .cursos{
+        margin-top: 50px;
+        .curso {
+            width: 250px;
+            height: 230px;
+            background: #75ba6a;
+            border: 1px solid #75ba6a;
+            box-sizing: border-box;
+            box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.14),
+                0px 1px 5px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+
+            .imagem{
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .nomeDoCurso{
+                width: 100%;
+                color: white;
+                text-align: center;
+                font-weight: 500;
+                margin-top: 30px;
+            }
+        }
+        
+
+    }
+
+}
+:host {
+    ::ng-deep.p-progressbar .p-progressbar-value {
+        background: #75ba6a;
+    }
+}
+
+@media (max-width: 575.98px){
+    .geral {
+        margin-left: 100px;
+    }
+}

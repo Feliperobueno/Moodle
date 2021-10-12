@@ -1,0 +1,20 @@
+.forms{
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+:host{
+    ::ng-deep  label{
+        color: #1f4164;
+    }
+
+    ::ng-deep .p-inputtext{
+        border-radius: 10px;
+        background-color: rgb(243, 243, 243);
+        
+    }
+    ::ng-deep .p-inputtext.nome{
+        width: 40%;
+
+    }
+}

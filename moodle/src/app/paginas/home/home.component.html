@@ -1,0 +1,24 @@
+<p-toast></p-toast>
+<div class="geral">
+    <h3>
+        Bem vindo à area de cursos
+    </h3>
+
+    <div class="progresso">
+        <p> Olá {{nomeCliente}}, este é seu progresso! </p>
+        <br><br>
+        <p-progressBar [value]="value"></p-progressBar>
+    </div>
+    <a href="" style="text-decoration: none;">
+        <div class="cursos">
+            <div class="curso">
+                <div class="imagem">
+                    <img src="../../../assets/ImagemCurso.png" alt="">
+                </div>
+                <div class="nomeDoCurso">
+                    {{nomeCurso}}
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
