@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  value1:any;
+  nome:any;
+  cpf:any;
+  dataNacimento:any;
+  email:any;
+  telefone:any;
+  telefoneAdicional:any;
+  cargo:any;
+
+  ModalCertificados: boolean = false;
+
+  showModalCertificados() {
+        this.ModalCertificados = true;
+    }
 
   constructor() { }
 

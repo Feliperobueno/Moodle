@@ -1,6 +1,31 @@
 .forms{
     margin-top: 50px;
     margin-left: 80px;
+    
+}
+
+.informacoes{
+    width: 80%;
+
+
+    span{
+        margin-top: 30px;
+    }
+
+    .divisao{
+        display: flex; 
+        width: 100%;
+    }
+}
+
+.acoes{
+    margin-top: 50px;
+    display: flex;
+    width: 80%;
+
+    .certificados{
+   text-align: right;
+    }
 }
 
 :host{
@@ -10,11 +35,97 @@
 
     ::ng-deep .p-inputtext{
         border-radius: 10px;
-        background-color: rgb(243, 243, 243);
-        
+        width: 100%;
+    
     }
-    ::ng-deep .p-inputtext.nome{
-        width: 40%;
+    ::ng-deep .p-inputtext.InputGrande{
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    ::ng-deep .p-inputtext.InputMedio{
+        width: 100%;
 
     }
+
+    ::ng-deep .p-float-label{
+        width: 100%;
+        font-weight: 500;
+
+    }
+    ::ng-deep .p-float-label.direita{
+        margin-left: 50px;
+    }
+    ::ng-deep .p-button{
+        border-radius: 10px;
+        color: #1f4164;
+        font-weight: 500;
+    }
+    ::ng-deep .p-float-label input:focus ~ label, .p-float-label input.p-filled ~ label, .p-float-label textarea:focus ~ label, .p-float-label textarea.p-filled ~ label, .p-float-label .p-inputwrapper-focus ~ label, .p-float-label .p-inputwrapper-filled ~ label{
+        font-size: 15px;
+    }
+
+    ::ng-deep .p-dialog-content{
+        background: #1f4164;
+        color: white;
+    }
+    ::ng-deep .p-dialog-header{
+        background: #1f4164;
+        color: white;
+    }
+    ::ng-deep .p-dialog-footer{
+        background: #1f4164;
+        color: white;
+        ::ng-deep .p-button{
+            color: white;
+        }
+    }
+    ::ng-deep .p-dialog-content{
+      color: white;
+
+
+    }
+
+    .certificados{
+        ::ng-deep .p-button{
+            background-color: #75BA6A;
+            border: #75BA6A;
+        }
+        ::ng-deep .p-button:hover{
+            background-color: #6ca763;
+            border: #6ca763;
+        }
+    }
+
 }
+
+@media (max-width: 575.98px){
+    .informacoes{
+       .divisao{
+        display: block;
+       }
+
+
+    }
+    .acoes{
+        display: block;
+        .senha{
+            width: 100%;
+            text-align: center;
+        }
+        .certificados{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    :host{
+        ::ng-deep .p-float-label.direita{
+            margin-left: 0px;
+        }
+        ::ng-deep .p-button{
+        width: 100%;
+        margin-top: 20px;
+        }
+       }
+}
+

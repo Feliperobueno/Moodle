@@ -12,6 +12,11 @@ import {ProgressBarModule} from 'primeng/progressbar';
 import {ToastModule} from 'primeng/toast';
 import { RodaPeComponent } from './paginas/roda-pe/roda-pe.component';
 import {InputTextModule} from 'primeng/inputtext';
+import {InputMaskModule} from 'primeng/inputmask';
+import {ButtonModule} from 'primeng/button';
+import {AccordionModule} from 'primeng/accordion';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,13 @@ import {InputTextModule} from 'primeng/inputtext';
     FormsModule,
     ProgressBarModule,
     ToastModule,
-    InputTextModule
+    InputTextModule,
+    InputMaskModule,
+    ButtonModule,
+    AccordionModule,
+    ModalModule.forRoot(),
+    DialogModule
+
     
   ],
   providers: [],

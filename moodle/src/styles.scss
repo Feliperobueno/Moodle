@@ -11,3 +11,9 @@
 *{
     font-family: 'Montserrat', sans-serif;  
 }
+
+body{
+    background: #EFEFEF;
+}
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
