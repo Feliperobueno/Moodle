@@ -8,12 +8,24 @@
 
 /*Padrões*/
 
+:host{
+    ::ng-deep .p-inputtext{
+        font-family: 'Montserrat', sans-serif;
+    }
+    ::ng-deep .p-component{
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
 *{
     font-family: 'Montserrat', sans-serif;  
+    font-weight: 300;
 }
 
 body{
-    background: #EFEFEF;
+
+    background: #ffffff;
+
 }
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
+
+

@@ -17,6 +17,8 @@ import {ButtonModule} from 'primeng/button';
 import {AccordionModule} from 'primeng/accordion';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import {DialogModule} from 'primeng/dialog';
+import {PasswordModule} from 'primeng/password';
+import { DividerModule } from "primeng/divider";
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import {DialogModule} from 'primeng/dialog';
     ButtonModule,
     AccordionModule,
     ModalModule.forRoot(),
-    DialogModule
+    DialogModule,
+    PasswordModule,
+    DividerModule
 
     
   ],

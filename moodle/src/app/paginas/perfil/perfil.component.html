@@ -2,62 +2,153 @@
     <h3>Perfil</h3>
     <div class="informacoes">
         <span class="p-float-label">
-            <input type="text" id="nome" pInputText [(ngModel)]="nome" class="InputGrande" autocomplete="name" />
+            <input type="text" id="nome" pInputText [(ngModel)]="nome" class="InputGrande" autocomplete="name"
+                disabled />
             <label for="nome">Nome completo</label>
         </span>
 
         <div class="divisao">
             <span class="p-float-label">
-                <p-inputMask inputId="cpf" mask="999.999.999-99" [(ngModel)]="cpf" class="InputMedio"
+                <p-inputMask inputId="cpf" mask="999.999.999-99" [(ngModel)]="cpf" [disabled]="true" class="InputMedio"
                     autocomplete="cpf"></p-inputMask>
                 <label for="cpf">CPF</label>
             </span>
             <span class="p-float-label direita">
-                <p-inputMask inputId="dtNascimento" mask="99/99/9999" [(ngModel)]="dataNacimento" class="InputMedio"
-                    autocomplete="dataNacimento"></p-inputMask>
+                <p-inputMask inputId="dtNascimento" [disabled]="true" mask="99/99/9999" [(ngModel)]="dataNacimento"
+                    class="InputMedio" autocomplete="dataNacimento"></p-inputMask>
                 <label for="dtNascimento">Data de nascimento</label>
             </span>
         </div>
         <span class="p-float-label">
-            <input type="email" id="email" pInputText [(ngModel)]="email" class="InputGrande" autocomplete="email" />
+            <input type="email" id="email" pInputText [(ngModel)]="email" class="InputGrande" autocomplete="email"
+                disabled />
             <label for="email">E-mail</label>
         </span>
 
         <div class="divisao">
             <span class="p-float-label">
-                <p-inputMask inputId="telefone" mask="(99) 9 9999-9999" [(ngModel)]="telefone" class="InputMedio">
+                <p-inputMask inputId="telefone" [disabled]="true" mask="(99) 9 9999-9999" [(ngModel)]="telefone"
+                    class="InputMedio">
                 </p-inputMask>
                 <label for="telefone">Telefone</label>
             </span>
             <span class="p-float-label direita">
-                <p-inputMask inputId="telefone" mask="(99) 9 9999-9999" [(ngModel)]="telefoneAdicional"
-                    class="InputMedio"></p-inputMask>
+                <p-inputMask inputId="telefone" [disabled]="true" mask="(99) 9 9999-9999"
+                    [(ngModel)]="telefoneAdicional" class="InputMedio"></p-inputMask>
                 <label for="telefone">Telefone adicional</label>
             </span>
         </div>
         <span class="p-float-label">
-            <input type="text" id="cargo" pInputText [(ngModel)]="cargo" class="InputGrande" />
+            <input type="text" id="cargo" pInputText [(ngModel)]="cargo" class="InputGrande" disabled />
             <label for="cargo">Cargo</label>
         </span>
     </div>
     <div class="acoes">
-        <div class="senha col-md-6">
-            <p-button label="Alterar senha" class="senha"></p-button>
+        <div class="senha col-md-4">
+            <p-button label="Alterar senha" (onClick)="showModalSenha()" class="senha"></p-button>
         </div>
-        <div class="certificados  col-md-6">
+        <div class="col-md-4 dados">
+            <p-button label="Solicitar alteração de dados" (click)="showModalCertificados()" class="dados"></p-button>
+        </div>
+        <div class="certificados  col-md-4">
             <p-button label="Ver certificados" (click)="showModalCertificados()" class="certificados"></p-button>
         </div>
-        
-        <p-dialog header="Header" [(visible)]="ModalCertificados" [breakpoints]="{'960px': '75vw'}" [style]="{width: '50vw'}"
-            [draggable]="false" [resizable]="false">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <ng-template pTemplate="footer">
-                <p-button (click)="ModalCertificados=false" label="No" styleClass="p-button-text"></p-button>
-                <p-button (click)="ModalCertificados=false" label="Yes" styleClass="p-button-text"></p-button>
-                </ng-template>
-        </p-dialog>
+
     </div>
 </div>
+
+<p-dialog header="Certificados" [(visible)]="ModalCertificados" [breakpoints]="{'960px': '75vw'}"
+    [style]="{width: '50vw'}" [draggable]="false" [resizable]="false">
+    <div class="modalCertificados row">
+        <div class="col">
+            <p>
+                Nome do curso:
+            </p>
+            <p>
+                Descrição:
+            </p>
+            <p>
+                Inicio:
+            </p>
+            <p>
+                Término:
+            </p>
+        </div>
+        <div class="col" style="text-align: end;">
+            <div>
+                <img src="../../../assets/ImagemCurso.png" style="border-radius: 10px;" alt="">
+            </div>
+
+            <div style="padding: 10px;">
+
+                <button class="btn btn-outline-light">
+                    Baixar o certificado
+                    <i class="bi bi-arrow-down-square-fill" style="margin-left: 5px;"></i>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modalCertificados row" style="margin-top: 20px;">
+        <div class="col">
+            <p>
+                Nome do curso:
+            </p>
+            <p>
+                Descrição:
+            </p>
+            <p>
+                Inicio:
+            </p>
+            <p>
+                Término:
+            </p>
+        </div>
+        <div class="col" style="text-align: end;">
+            <div>
+                <img src="../../../assets/ImagemCurso.png" style="border-radius: 10px;" alt="">
+            </div>
+
+            <div style="padding: 10px;">
+
+                <button class="btn btn-outline-light">
+                    Baixar o certificado
+                    <i class="bi bi-arrow-down-square-fill" style="margin-left: 5px;"></i>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</p-dialog>
+
+
+<p-dialog header="Alterar senha" [(visible)]="ModalSenha" [breakpoints]="{'460px': '75vw'}" [style]="{width: '300px'}"
+    [draggable]="false" [resizable]="false">
+
+    <div class="ModalSenha row">
+        <div class="col" aria-autocomplete="none">
+            
+                <span class="p-float-label">
+                    <input type="password" id="senhaAntiga" pInputText [(ngModel)]="senhaAntiga" />
+                    <label for="senhaAntiga">Senha Antiga</label>
+                </span>
+                <span class="p-float-label">
+                    <p-password id="senhaNova" [(ngModel)]="senhaNova" aria-autocomplete="none" minlength="6">
+
+                    </p-password>
+                    <label for="senhaNova">Senha Nova</label>
+                </span>
+                <span class="p-float-label">
+                    <input type="password" id="senhaNovaConfirmar" pInputText [(ngModel)]="senhaNovaConfirmar"
+                        minlength="6" />
+                    <label for="senhaNovaConfirmar">Confirmar senha</label>
+                </span>
+
+                <p-button icon="pi pi-check" label="Alterar senha" >
+                </p-button>
+        </div>
+    </div>
+</p-dialog>

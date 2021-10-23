@@ -1,16 +1,25 @@
 .forms{
-    margin-top: 50px;
-    margin-left: 80px;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 10%;
+
+    h3{
+        text-align: start;
+        margin-bottom: 5%;
+    }
+
     
+}
+span{
+    margin-top: 30px;
 }
 
 .informacoes{
-    width: 80%;
-
-
-    span{
-        margin-top: 30px;
-    }
+    width: 100%;
 
     .divisao{
         display: flex; 
@@ -19,13 +28,12 @@
 }
 
 .acoes{
+
     margin-top: 50px;
     display: flex;
-    width: 80%;
+    width: 100%;
 
-    .certificados{
-   text-align: right;
-    }
+
 }
 
 :host{
@@ -33,10 +41,9 @@
         color: #1f4164;
     }
 
-    ::ng-deep .p-inputtext{
+    ::ng-deep .p-inputtext, .p-password{
         border-radius: 10px;
         width: 100%;
-    
     }
     ::ng-deep .p-inputtext.InputGrande{
         width: 100%;
@@ -66,41 +73,87 @@
     }
 
     ::ng-deep .p-dialog-content{
-        background: #1f4164;
+        background: #bee3db;
         color: white;
-    }
-    ::ng-deep .p-dialog-header{
-        background: #1f4164;
-        color: white;
-    }
-    ::ng-deep .p-dialog-footer{
-        background: #1f4164;
-        color: white;
+        border-radius: 0 0  ;
         ::ng-deep .p-button{
-            color: white;
-        }
-    }
-    ::ng-deep .p-dialog-content{
-      color: white;
-
-
-    }
-
-    .certificados{
-        ::ng-deep .p-button{
-            background-color: #75BA6A;
-            border: #75BA6A;
+            border: 1px solid #353535;
+            margin-top: 20px;
         }
         ::ng-deep .p-button:hover{
-            background-color: #6ca763;
-            border: #6ca763;
+            border: 1px solid #353535;
+            background: #353535;
+            color: #fff;
         }
+    }
+    ::ng-deep .p-dialog{
+        border-radius: 10px;
+        
+    }
+    ::ng-deep .p-dialog-header{
+        background: #bee3db;
+        color: white;
+        border-radius: 10px 10px 0 0 ;
+        
+    }
+    ::ng-deep .p-dialog-footer{
+        text-align: center;
+        background: #bee3db;
+        color: white;
+        border-radius:0 0 10px 10px ;
+
+
+    }
+    ::ng-deep .p-button{
+        background-color: transparent;
+        border: 1px solid #284B63;
+        color: #284B63;
+        border-radius: 10px;
+    }
+    ::ng-deep .p-button:hover{
+        background-color: #3a6769;
+        border: #3a6769;
+        color: #fff;
+    }
+    ::ng-deep .dados .p-button {
+        border: 1px solid #c75757;
+        color: #c75757;
+    }
+    ::ng-deep .dados .p-button:hover{
+        background-color: #c75757;
+        border: #c75757;
+        color: #fff;
+    }
+
+    ::ng-deep .senha .p-button {
+
+        border: 1px solid #cea623;
+        color: #cea623;
+    }
+    ::ng-deep .senha .p-button:hover{
+        background-color: #cea623;
+        border: #cea623;
+        color: #fff;
+    }
+    ::ng-deep .p-dialog-header-close-icon{
+
+        color: #fff;
     }
 
 }
 
+.modalCertificados{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 @media (max-width: 575.98px){
+    .forms{
+        margin-left: 20%;
+    }
     .informacoes{
+        width: 80%;
        .divisao{
         display: block;
        }

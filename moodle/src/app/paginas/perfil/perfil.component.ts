@@ -1,3 +1,4 @@
+import { PrimeNGConfig } from 'primeng/api';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,23 +8,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
 
-  nome:any;
-  cpf:any;
-  dataNacimento:any;
-  email:any;
-  telefone:any;
-  telefoneAdicional:any;
-  cargo:any;
+  nome:any = 'Felipe Rodrigues Bueno Fernandes';
+  cpf:any = '70261577107';
+  dataNacimento:any = '18031998';
+  email:any = 'feliperodriguesbueno@hotmail.com';
+  telefone:any = '62981852465';
+  telefoneAdicional:any = '62981852465';
+  cargo:any = 'AGR';
+  senhaAntiga:any;
+  senhaNova:any;
+  senhaNovaConfirmar:any;
 
   ModalCertificados: boolean = false;
+  ModalSenha: boolean = false;
 
   showModalCertificados() {
         this.ModalCertificados = true;
     }
 
-  constructor() { }
+    showModalSenha() {
+      this.ModalSenha = true;
+  }
+
+
+  
+
+  constructor(private config: PrimeNGConfig) { 
+  }
 
   ngOnInit(): void {
+
+    this.config.setTranslation({
+      weak: 'Fraca',
+      medium: 'Bom',
+      strong: 'Forte',
+      passwordPrompt: 'digite sua senha'
+      //translations
+
+      
+  });
   }
+  
 
 }

@@ -1,7 +1,10 @@
 /*Cores*/
-    $azulEscuro: #1C2D57;
+    $azulEscuro: #284B63;
 
+.icone{
+    margin: 0px 30px 0 8px;
 
+}
 
 
 .main-menu:hover,nav.main-menu.expanded {
@@ -12,7 +15,8 @@ overflow:visible;
     }
 
     .icone{
-        visibility: hidden;
+        display: none;
+
     }
 }
 
@@ -25,8 +29,8 @@ height:100%;
 left:0;
 width:60px;
 overflow:hidden;
--webkit-transition:width .1s linear;
-transition:width .1s linear;
+-webkit-transition:width .2s linear;
+transition:width .2s linear;
 -webkit-transform:translateZ(0) scale(1,1);
 z-index:1000;
 }
@@ -40,7 +44,11 @@ margin:7px 0px;
     margin-left: 10px;
 }
 .active{
-    i{
+    i, svg{
+        path, circle{
+            fill: #2D3142;
+        }
+        
         background-color: white;
         color: $azulEscuro;
     }
@@ -67,16 +75,29 @@ padding: 10px;
 
         text-decoration: none;
         color: white;
+        
 
-        i{
+        i, svg{
             margin: 0px 30px 0 0;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 5px;
+
         }
         
     }
 
     a:hover{
+
         color: rgb(196, 196, 196);
 
+        svg{
+            background: #fff;
+            path, circle{
+                fill: #2D3142;
+                
+            }
+        }
 
     }
 }
