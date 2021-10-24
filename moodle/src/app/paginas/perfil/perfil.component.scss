@@ -6,6 +6,7 @@
     align-content: center;
     text-align: center;
     margin-top: 10%;
+    height: 80vh;
 
     h3{
         text-align: start;
@@ -74,7 +75,7 @@ span{
 
     ::ng-deep .p-dialog-content{
         background: #bee3db;
-        color: white;
+        color: #353535;
         border-radius: 0 0  ;
         ::ng-deep .p-button{
             border: 1px solid #353535;
@@ -92,14 +93,14 @@ span{
     }
     ::ng-deep .p-dialog-header{
         background: #bee3db;
-        color: white;
+        color: #353535;
         border-radius: 10px 10px 0 0 ;
         
     }
     ::ng-deep .p-dialog-footer{
         text-align: center;
         background: #bee3db;
-        color: white;
+        color: #353535;
         border-radius:0 0 10px 10px ;
 
 
@@ -137,13 +138,13 @@ span{
     }
     ::ng-deep .p-dialog-header-close-icon{
 
-        color: #fff;
+        color: #353535;
     }
 
 }
 
 .modalCertificados{
-    border: 1px solid white;
+    border: 1px solid #353535;
     border-radius: 10px;
     padding: 10px;
 }

@@ -19,6 +19,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import {DialogModule} from 'primeng/dialog';
 import {PasswordModule} from 'primeng/password';
 import { DividerModule } from "primeng/divider";
+import { CursosChatguruComponent } from './paginas/cursos-chatguru/cursos-chatguru.component';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { DividerModule } from "primeng/divider";
     MenuComponent,
     HomeComponent,
     PerfilComponent,
-    RodaPeComponent
+    RodaPeComponent,
+    CursosChatguruComponent
   ],
   imports: [
     BrowserModule,
@@ -42,11 +46,23 @@ import { DividerModule } from "primeng/divider";
     ModalModule.forRoot(),
     DialogModule,
     PasswordModule,
-    DividerModule
+    DividerModule,
+    ProgressSpinnerModule,
+    NgCircleProgressModule.forRoot({
+
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+      
+    })
 
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

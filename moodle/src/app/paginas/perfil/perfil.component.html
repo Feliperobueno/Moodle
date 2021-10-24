@@ -44,13 +44,11 @@
         </span>
     </div>
     <div class="acoes">
-        <div class="senha col-md-4">
+        <div class="senha col-md-6">
             <p-button label="Alterar senha" (onClick)="showModalSenha()" class="senha"></p-button>
         </div>
-        <div class="col-md-4 dados">
-            <p-button label="Solicitar alteração de dados" (click)="showModalCertificados()" class="dados"></p-button>
-        </div>
-        <div class="certificados  col-md-4">
+
+        <div class="certificados  col-md-6">
             <p-button label="Ver certificados" (click)="showModalCertificados()" class="certificados"></p-button>
         </div>
 
@@ -81,9 +79,14 @@
 
             <div style="padding: 10px;">
 
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-dark">
                     Baixar o certificado
-                    <i class="bi bi-arrow-down-square-fill" style="margin-left: 5px;"></i>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.29289 9.70711L11.2929 14.7071L12 15.4142L12.7071 14.7071L17.7071 9.70711L16.2929 8.29289L13 11.5858V4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H11L11 11.5858L7.70711 8.29289L6.29289 9.70711Z"
+                            fill="currentColor" />
+                    </svg>
                 </button>
 
             </div>
@@ -112,9 +115,17 @@
 
             <div style="padding: 10px;">
 
-                <button class="btn btn-outline-light">
+                <button class="btn btn-outline-dark">
                     Baixar o certificado
-                    <i class="bi bi-arrow-down-square-fill" style="margin-left: 5px;"></i>
+
+
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M6.29289 9.70711L11.2929 14.7071L12 15.4142L12.7071 14.7071L17.7071 9.70711L16.2929 8.29289L13 11.5858V4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H11L11 11.5858L7.70711 8.29289L6.29289 9.70711Z"
+                            fill="currentColor" />
+                    </svg>
+
                 </button>
 
             </div>
@@ -125,30 +136,30 @@
 </p-dialog>
 
 
-<p-dialog header="Alterar senha" [(visible)]="ModalSenha" [breakpoints]="{'460px': '75vw'}" [style]="{width: '300px'}"
+<p-dialog header="Alterar senha" [(visible)]="ModalSenha" [breakpoints]="{'460px': '75vw'}" [style]="{width: '280px'}"
     [draggable]="false" [resizable]="false">
 
     <div class="ModalSenha row">
         <div class="col" aria-autocomplete="none">
-            
-                <span class="p-float-label">
-                    <input type="password" id="senhaAntiga" pInputText [(ngModel)]="senhaAntiga" />
-                    <label for="senhaAntiga">Senha Antiga</label>
-                </span>
-                <span class="p-float-label">
-                    <p-password id="senhaNova" [(ngModel)]="senhaNova" aria-autocomplete="none" minlength="6">
 
-                    </p-password>
-                    <label for="senhaNova">Senha Nova</label>
-                </span>
-                <span class="p-float-label">
-                    <input type="password" id="senhaNovaConfirmar" pInputText [(ngModel)]="senhaNovaConfirmar"
-                        minlength="6" />
-                    <label for="senhaNovaConfirmar">Confirmar senha</label>
-                </span>
+            <span class="p-float-label">
+                <input type="password" id="senhaAntiga" pInputText [(ngModel)]="senhaAntiga" />
+                <label for="senhaAntiga">Senha Antiga</label>
+            </span>
+            <span class="p-float-label">
+                <p-password id="senhaNova" [(ngModel)]="senhaNova" aria-autocomplete="none" minlength="6">
 
-                <p-button icon="pi pi-check" label="Alterar senha" >
-                </p-button>
+                </p-password>
+                <label for="senhaNova">Senha Nova</label>
+            </span>
+            <span class="p-float-label">
+                <input type="password" id="senhaNovaConfirmar" pInputText [(ngModel)]="senhaNovaConfirmar"
+                    minlength="6" />
+                <label for="senhaNovaConfirmar">Confirmar senha</label>
+            </span>
+
+            <p-button icon="pi pi-check" label="Alterar senha">
+            </p-button>
         </div>
     </div>
 </p-dialog>
