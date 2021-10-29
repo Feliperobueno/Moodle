@@ -7,23 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosChatguruComponent implements OnInit {
 
-  percentProgress: number = 10;
 
-  formatSubtitle = (percent: number) : string => {
-    if(percent >= 100){
-      return "Congratulations!"
-    }else if(percent >= 50){
-      return "Half"
-    }else if(percent > 0){
-      return "Just began"
-    }else {
-      return "Not started"
-    }
+  NomeCurso = "ChatGuru";
+
+  DescricaoCurso = "Curso sobre o sistema de mensagens utilizado pela AC CONSULTI BRASIL."
+
+  dtInicio = "29/10/2021"
+
+  dtTermino = "01/10/2021"
+
+  FinalizarCurso: Boolean = false;
+
+  showModalFinalizarCurso() {
+    this.FinalizarCurso = true;
   }
 
+  percentProgress: any = 10;
+
+
+
   constructor() {
-    
-   }
+
+  }
 
   ngOnInit(): void {
   }

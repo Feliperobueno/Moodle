@@ -1,4 +1,4 @@
-.forms{
+.forms {
     align-self: center;
     justify-content: center;
     justify-self: center;
@@ -6,112 +6,107 @@
     align-content: center;
     text-align: center;
     margin-top: 10%;
-    height: 80vh;
+    margin-left: 50px;
 
-    h3{
+    h3 {
         text-align: start;
         margin-bottom: 5%;
     }
-
-    
 }
-span{
+span {
     margin-top: 30px;
 }
 
-.informacoes{
+.informacoes {
     width: 100%;
 
-    .divisao{
-        display: flex; 
+    .divisao {
+        display: flex;
         width: 100%;
     }
 }
 
-.acoes{
-
+.acoes {
     margin-top: 50px;
     display: flex;
     width: 100%;
-
-
 }
 
-:host{
-    ::ng-deep  label{
+:host {
+    ::ng-deep label {
         color: #1f4164;
     }
 
-    ::ng-deep .p-inputtext, .p-password{
+    ::ng-deep .p-inputtext,
+    .p-password {
         border-radius: 10px;
         width: 100%;
     }
-    ::ng-deep .p-inputtext.InputGrande{
+    ::ng-deep .p-inputtext.InputGrande {
         width: 100%;
         margin-right: 30px;
     }
 
-    ::ng-deep .p-inputtext.InputMedio{
+    ::ng-deep .p-inputtext.InputMedio {
         width: 100%;
-
     }
 
-    ::ng-deep .p-float-label{
+    ::ng-deep .p-float-label {
         width: 100%;
         font-weight: 500;
-
     }
-    ::ng-deep .p-float-label.direita{
+    ::ng-deep .p-float-label.direita {
         margin-left: 50px;
     }
-    ::ng-deep .p-button{
+    ::ng-deep .p-button {
         border-radius: 10px;
         color: #1f4164;
         font-weight: 500;
     }
-    ::ng-deep .p-float-label input:focus ~ label, .p-float-label input.p-filled ~ label, .p-float-label textarea:focus ~ label, .p-float-label textarea.p-filled ~ label, .p-float-label .p-inputwrapper-focus ~ label, .p-float-label .p-inputwrapper-filled ~ label{
+    ::ng-deep .p-float-label input:focus ~ label,
+    .p-float-label input.p-filled ~ label,
+    .p-float-label textarea:focus ~ label,
+    .p-float-label textarea.p-filled ~ label,
+    .p-float-label .p-inputwrapper-focus ~ label,
+    .p-float-label .p-inputwrapper-filled ~ label {
         font-size: 15px;
     }
 
-    ::ng-deep .p-dialog-content{
+    ::ng-deep .p-dialog-content {
         background: #bee3db;
         color: #353535;
-        border-radius: 0 0  ;
-        ::ng-deep .p-button{
+        border-radius: 0 0;
+        ::ng-deep .p-button {
             border: 1px solid #353535;
             margin-top: 20px;
         }
-        ::ng-deep .p-button:hover{
+        ::ng-deep .p-button:hover {
             border: 1px solid #353535;
             background: #353535;
             color: #fff;
         }
     }
-    ::ng-deep .p-dialog{
+    ::ng-deep .p-dialog {
         border-radius: 10px;
-        
     }
-    ::ng-deep .p-dialog-header{
+    ::ng-deep .p-dialog-header {
         background: #bee3db;
         color: #353535;
-        border-radius: 10px 10px 0 0 ;
-        
+        border-radius: 10px 10px 0 0;
     }
-    ::ng-deep .p-dialog-footer{
+    ::ng-deep .p-dialog-footer {
         text-align: center;
         background: #bee3db;
         color: #353535;
-        border-radius:0 0 10px 10px ;
-
-
+        border-radius: 0 0 10px 10px;
     }
-    ::ng-deep .p-button{
+    ::ng-deep .p-button {
         background-color: transparent;
-        border: 1px solid #284B63;
-        color: #284B63;
+        border: 1px solid #284b63;
+        color: #284b63;
         border-radius: 10px;
     }
-    ::ng-deep .p-button:hover{
+    ::ng-deep .p-button:hover {
         background-color: #3a6769;
         border: #3a6769;
         color: #fff;
@@ -120,66 +115,60 @@ span{
         border: 1px solid #c75757;
         color: #c75757;
     }
-    ::ng-deep .dados .p-button:hover{
+    ::ng-deep .dados .p-button:hover {
         background-color: #c75757;
         border: #c75757;
         color: #fff;
     }
 
     ::ng-deep .senha .p-button {
-
         border: 1px solid #cea623;
         color: #cea623;
     }
-    ::ng-deep .senha .p-button:hover{
+    ::ng-deep .senha .p-button:hover {
         background-color: #cea623;
         border: #cea623;
         color: #fff;
     }
-    ::ng-deep .p-dialog-header-close-icon{
-
+    ::ng-deep .p-dialog-header-close-icon {
         color: #353535;
     }
-
 }
 
-.modalCertificados{
+.modalCertificados {
     border: 1px solid #353535;
     border-radius: 10px;
     padding: 10px;
 }
 
-@media (max-width: 575.98px){
-    .forms{
+@media (max-width: 575.98px) {
+    .forms {
         margin-left: 20%;
     }
-    .informacoes{
+    .informacoes {
         width: 80%;
-       .divisao{
-        display: block;
-       }
-
-
+        .divisao {
+            display: block;
+        }
     }
-    .acoes{
+    .acoes {
         display: block;
-        .senha{
+        .senha {
             width: 100%;
             text-align: center;
         }
-        .certificados{
+        .certificados {
             width: 100%;
             text-align: center;
         }
     }
-    :host{
-        ::ng-deep .p-float-label.direita{
+    :host {
+        ::ng-deep .p-float-label.direita {
             margin-left: 0px;
         }
-        ::ng-deep .p-button{
-        width: 100%;
-        margin-top: 20px;
+        ::ng-deep .p-button {
+            width: 100%;
+            margin-top: 20px;
         }
-       }
+    }
 }
-
