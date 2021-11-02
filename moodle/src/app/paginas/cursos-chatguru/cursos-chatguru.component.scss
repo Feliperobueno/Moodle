@@ -1,3 +1,7 @@
+$verdeClaro: #D9E8F5;
+$azul: #304269;
+$laranja: #f26101; 
+
 .superior {
   margin-top: 50px;
   width: 100%;
@@ -9,7 +13,7 @@
 }
 
 .FinalizarCurso{
-  border: 1px solid #000;
+  border: 1px solid $azul;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
@@ -25,10 +29,35 @@
   margin: 0 auto;
 }
 :host {
-  ::ng-deep .progresso svg {
-    width: 100px;
-    height: 100px;
-  }
+  ::ng-deep .p-dialog-content {
+    background: $verdeClaro;
+    color: $azul;
+    border-radius: 0 0 20px 0;
+}
+::ng-deep .p-dialog {
+    border-radius: 10px;
+    a{
+      border: 1px solid $azul;
+      color: $azul;
+     }
+     a:hover{
+       background: $azul;
+       color: #fff;
+     }
+}
+::ng-deep .p-dialog-header {
+    background: $verdeClaro;
+    color: #353535;
+    border-radius: 10px 0 0 0;
+}
+::ng-deep .p-dialog-footer {
+    text-align: center;
+    background: $verdeClaro;
+    color: #353535;
+    border-radius: 0 0 10px 10px;
+
+}
+
 }
 iframe {
   border-radius: 10px;
@@ -43,6 +72,8 @@ h3 {
   margin: 50px 0;
   text-align: center;
   width: 100%;
+
+  
 
   a {
     width: 100%;
@@ -77,4 +108,13 @@ h3 {
     color: red;
     font-weight: 900;
   }
+}
+
+.btn-outline-success{
+  border: 1px solid $laranja;
+  color: $azul;
+}
+.btn-outline-success:hover{
+  background: $laranja;
+  color: #fff;
 }

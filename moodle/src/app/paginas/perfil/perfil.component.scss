@@ -1,3 +1,8 @@
+$verdeEscuro: #D9E8F5;
+$verdeClaro: #304269;
+$azul: #304269;
+$laranja: #f26101;
+
 .forms {
     align-self: center;
     justify-content: center;
@@ -73,62 +78,55 @@ span {
     }
 
     ::ng-deep .p-dialog-content {
-        background: #bee3db;
-        color: #353535;
-        border-radius: 0 0;
-        ::ng-deep .p-button {
-            border: 1px solid #353535;
-            margin-top: 20px;
-        }
-        ::ng-deep .p-button:hover {
-            border: 1px solid #353535;
-            background: #353535;
-            color: #fff;
-        }
+        background: $verdeEscuro;
+        color: $verdeClaro;
+        border-radius: 0 0 20px 0;
+
+
     }
     ::ng-deep .p-dialog {
         border-radius: 10px;
     }
     ::ng-deep .p-dialog-header {
-        background: #bee3db;
+        background: $verdeEscuro;
         color: #353535;
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px 0 0 0;
     }
     ::ng-deep .p-dialog-footer {
         text-align: center;
-        background: #bee3db;
+        background: $verdeEscuro;
         color: #353535;
         border-radius: 0 0 10px 10px;
     }
     ::ng-deep .p-button {
         background-color: transparent;
-        border: 1px solid #284b63;
-        color: #284b63;
+        border: 1px solid $verdeClaro;
+        color: $azul;
         border-radius: 10px;
     }
     ::ng-deep .p-button:hover {
-        background-color: #3a6769;
-        border: #3a6769;
-        color: #fff;
-    }
-    ::ng-deep .dados .p-button {
-        border: 1px solid #c75757;
-        color: #c75757;
-    }
-    ::ng-deep .dados .p-button:hover {
-        background-color: #c75757;
-        border: #c75757;
-        color: #fff;
+        background-color: transparent;
+        margin-top: -1px;
+        border: 1px solid $verdeClaro;
+        color: $azul;
     }
 
     ::ng-deep .senha .p-button {
-        border: 1px solid #cea623;
-        color: #cea623;
+        background: transparent;
+        border: 1px solid $azul;
+        color: $azul;
+    }
+    ::ng-deep .alterarSenha .p-button {
+        background: transparent;
+        border: 1px solid $azul;
+        color: $azul;
+    }
+    ::ng-deep .alterarSenha .p-button:hover {
+        background: $azul;
+        color: #fff;
     }
     ::ng-deep .senha .p-button:hover {
-        background-color: #cea623;
-        border: #cea623;
-        color: #fff;
+        margin-top: -1px;
     }
     ::ng-deep .p-dialog-header-close-icon {
         color: #353535;
@@ -136,9 +134,19 @@ span {
 }
 
 .modalCertificados {
-    border: 1px solid #353535;
+    border: 1px solid $verdeClaro;
     border-radius: 10px;
     padding: 10px;
+    color: $verdeClaro;
+}
+
+.btn-outline-dark{
+    border: 1px solid $verdeClaro;
+    color: $verdeClaro;
+}
+.btn-outline-dark:hover{
+    background: $verdeClaro;
+    color: #fff;
 }
 
 @media (max-width: 575.98px) {

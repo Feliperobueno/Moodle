@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
 
   value: number = 0;
 
+  
+
   constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
